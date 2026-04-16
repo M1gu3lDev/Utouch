@@ -14,9 +14,9 @@ O **utouch** é um ecossistema *wearable* de baixo custo projetado para quantifi
 ### Firmware e Bibliotecas
 * **Linguagem:** C++ utilizando o framework Arduino.
 * **Ambiente:** PlatformIO (VS Code).
-* [cite_start]**Biblioteca Base:** I2Cdev / MPU9250 (Baseada na coleção de Jeff Rowberg)[cite: 9, 178].
-* [cite_start]**Configuração de Sensibilidade:** * Acelerômetro: $\pm 2g$ ($16384$ LSB/mg) [cite: 190, 614-617].
-    * [cite_start]Giroscópio: $\pm 250^\circ/s$ ($131$ LSB/deg/s)[cite: 190, 641].
+* [cite_start]**Biblioteca Base:** I2Cdev / MPU9250 (Baseada na coleção de Jeff Rowberg).
+* [cite_start]**Configuração de Sensibilidade:** * Acelerômetro: $\pm 2g$ ($16384$ LSB/mg).
+    * [cite_start]Giroscópio: $\pm 250^\circ/s$ ($131$ LSB/deg/s).
 
 ---
 
@@ -54,9 +54,9 @@ $$\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - x'_i)^2}$$
 ## 🚀 Roteiro de Desenvolvimento (Roadmap)
 
 ### Fase 1: Estabilização de Firmware (Concluída ✅)
-* [cite_start]Integração I2C entre ESP32 e MPU9250 [cite: 600-602].
+* [cite_start]Integração I2C entre ESP32 e MPU9250.
 * Correção de Baud Rate para **115200** no `platformio.ini`.
-* [cite_start]Verificação de ID de hardware via registrador `WHO_AM_I` ($0x75$)[cite: 23, 192].
+* [cite_start]Verificação de ID de hardware via registrador `WHO_AM_I` ($0x75$).
 
 ### Fase 2: Módulo de Captura de Dados (Em andamento 🔄)
 * Implementação de rotinas de calibração automática (`calibrateAccelGyro`) para eliminar o *drift* inercial.
@@ -131,8 +131,8 @@ $$ROM = | Pitch_{max} - Pitch_{min} |$$
 
 ## 3. Configurações de Precisão
 
-[cite_start]Para garantir a validade clínica, o firmware inicializa o sensor com as seguintes sensibilidades [cite: 189-190]:
+[cite_start]Para garantir a validade clínica, o firmware inicializa o sensor com as seguintes sensibilidades:
 * [cite_start]**Giroscópio:** $\pm 250^\circ/s$ ($131$ LSB por grau/segundo)[cite: 641].
-* [cite_start]**Acelerômetro:** $\pm 2g$ ($16384$ LSB/g) [cite: 614-617].
+* [cite_start]**Acelerômetro:** $\pm 2g$ ($16384$ LSB/g).
 
 Estas configurações garantem a resolução necessária para detectar pequenas melhorias na reabilitação motora.
